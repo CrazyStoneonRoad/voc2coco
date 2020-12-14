@@ -12,3 +12,11 @@ The xmllist.txt is the list of xml file names to convert.
 The "../Annotations" is the place where all xmls located.
 
 The "output.json" is the output json file.
+
+
+-----------------------------------------------------
+run codes under terminal: 
+```
+python gen_list.py
+sh run.sh
+``` 
