@@ -15,8 +15,12 @@ The "output.json" is the output json file.
 
 
 -----------------------------------------------------
-run codes under terminal: 
+under terminal, prepare xml list from VOC format: 
 ```
 python gen_list.py
+```
+
+under terminal, prepare json of COCO format: 
+```
 sh run.sh
 ``` 
