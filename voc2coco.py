@@ -6,7 +6,8 @@ import sys
 import os
 import json
 import xml.etree.ElementTree as ET
-
+from time import sleep
+from tqdm import tqdm
 
 START_BOUNDING_BOX_ID = 1
 PRE_DEFINE_CATEGORIES = {}
@@ -48,9 +49,9 @@ def convert(xml_list, xml_dir, json_file):
                  "categories": []}
     categories = PRE_DEFINE_CATEGORIES
     bnd_id = START_BOUNDING_BOX_ID
-    for line in list_fp:
+    for line in tqdm(list_fp):
         line = line.strip()
-        print("Processing %s"%(line))
+        #print("Processing %s"%(line))
         xml_f = os.path.join(xml_dir, line)
         tree = ET.parse(xml_f)
         root = tree.getroot()
@@ -93,7 +94,7 @@ def convert(xml_list, xml_dir, json_file):
                    'segmentation': []}
             json_dict['annotations'].append(ann)
             bnd_id = bnd_id + 1
-
+        pass
     for cate, cid in categories.items():
         cat = {'supercategory': 'none', 'id': cid, 'name': cate}
         json_dict['categories'].append(cat)
@@ -106,8 +107,8 @@ def convert(xml_list, xml_dir, json_file):
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
-        print('3 auguments are need.')
+        print('3 arguments are needed.')
         print('Usage: %s XML_LIST.txt XML_DIR OUTPU_JSON.json'%(sys.argv[0]))
         exit(1)
-
+    print(sys.argv[0])
     convert(sys.argv[1], sys.argv[2], sys.argv[3])
