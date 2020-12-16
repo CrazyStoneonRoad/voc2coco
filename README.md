@@ -2,6 +2,8 @@
 ## run.sh ##
 Main file is `run.sh`
 
+Better make sure the existence of the path `./tmp/`
+
 - Input parameters: 
 	- `/.../AnnotationXMLs_path/` which contains xmls,
 	- `DatasetName` defined by yourself. 
