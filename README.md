@@ -1,9 +1,7 @@
 # Getting started
-
-@[toc]
-
+-------------------
 ## 中文版本 ##
-### run.sh ###
+### 1. run.sh ###
 主文件为 `run.sh`
 
 确保运行前，项目下存在目录`run.sh`
@@ -24,7 +22,7 @@ run "/.../AnnotationXMLs_path/" "DatasetName"
 如需修改参数、参数输入方式，可以更改`run.sh`中前面几行的变量值
 
 
-### check.py ###
+### 2. check.py ###
 
 检查数据集是否包含一些错误标签，例如：
 
@@ -33,7 +31,7 @@ xmin>xmax
 ymin>ymax
 ```
 
-### gen_lst.py ###
+### 3. gen_lst.py ###
 
 生成文件列表，为`voc2coco.py`做准备
 
@@ -45,7 +43,7 @@ python gen_list.py dir_rt_input={"hrrsd/Annotations/"} dtst={hrrsd} fold={f1, f2
 
 [参数] 可选参数.
 
-### voc2coco.py ###
+### 4. voc2coco.py ###
 
 将pascol voc格式xml标注文件，转换成coco格式标注文件
 
@@ -64,7 +62,7 @@ python gen_list.py dir_rt_input={"hrrsd/Annotations/"} dtst={hrrsd} fold={f1, f2
 `"output.json"`为输出的`json`文件
 
 ## English Version ##
-### run.sh ###
+### 1. run.sh ###
 Main file is `run.sh` 
 
 Better make sure the existence of the path `./tmp/`
@@ -84,7 +82,7 @@ This file would call the follwing files.
 
 You can change the run.sh file to change parameters to be used.
 
-### check.py ###
+### 2. check.py ###
 
 Check if the dataset contains some error labels:
 
@@ -93,7 +91,7 @@ xmin>xmax
 ymin>ymax
 ```
 
-### gen_lst.py ###
+### 3. gen_lst.py ###
 
 Generate file list to get prepared for `voc2coco.py`
 
@@ -105,7 +103,7 @@ python gen_list.py dir_rt_input={"hrrsd/Annotations/"} dtst={hrrsd} fold={f1, f2
 
 [parameter] optional parameters.
 
-### voc2coco.py ###
+### 4. voc2coco.py ###
 
 Convert pascol voc annotation xml to COCO json format.
 
